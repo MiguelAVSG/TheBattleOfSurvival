@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class name="MyWorld" extends="World" extends-java="World" enable="true" strideversion="1">
+    <javadoc xml:space="preserve"/>
+    <imports>
+        <import target="java.util.*" enable="true"/>
+        <import target="greenfoot.*" enable="true"/>
+    </imports>
+    <implements/>
+    <fields/>
+    <constructors>
+        <constructor access="public" enable="true">
+            <javadoc xml:space="preserve">Constructor for objects of class MyWorld.</javadoc>
+            <params/>
+            <throws/>
+            <delegate target="super" params="800,600,1" params-java="800, 600, 1"/>
+            <body>
+                <call expression="prepare()" expression-java="prepare()" enable="true"/>
+            </body>
+        </constructor>
+    </constructors>
+    <methods>
+        <method access="private" type="void" type-java="void" name="prepare" enable="true">
+            <javadoc xml:space="preserve">Prepare the world for the start of the program.
+That is: create the initial objects and add them to the world.</javadoc>
+            <params/>
+            <throws/>
+            <body>
+                <variable type="Instrucciones" type-java="Instrucciones" name="instrucciones" value="new Instrucciones()" value-java=" new Instrucciones()" enable="true"/>
+                <call expression="addObject(instrucciones,402,334)" expression-java="addObject(instrucciones, 402, 334)" enable="true"/>
+                <variable type="Records" type-java="Records" name="records" value="new Records()" value-java=" new Records()" enable="true"/>
+                <call expression="addObject(records,400,406)" expression-java="addObject(records, 400, 406)" enable="true"/>
+                <variable type="Salir" type-java="Salir" name="salir" value="new Salir()" value-java=" new Salir()" enable="true"/>
+                <call expression="addObject(salir,399,485)" expression-java="addObject(salir, 399, 485)" enable="true"/>
+                <variable type="Titulo" type-java="Titulo" name="titulo" value="new Titulo()" value-java=" new Titulo()" enable="true"/>
+                <call expression="addObject(titulo,410,97)" expression-java="addObject(titulo, 410, 97)" enable="true"/>
+                <variable type="play" type-java="play" name="play" value="new play()" value-java=" new play()" enable="true"/>
+                <call expression="addObject(play,392,257)" expression-java="addObject(play, 392, 257)" enable="true"/>
+            </body>
+        </method>
+    </methods>
+</class>
