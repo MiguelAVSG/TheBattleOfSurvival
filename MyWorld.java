@@ -1,20 +1,22 @@
-// WARNING: This file is auto-generated and any changes to it will be overwritten
-import lang.stride.*;
-import java.util.*;
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
+ * Write a description of class MyWorld here.
  * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
 public class MyWorld extends World
 {
 
     /**
      * Constructor for objects of class MyWorld.
+     * 
      */
     public MyWorld()
-    {
-        super(800, 600, 1);
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(800, 600, 1); 
         prepare();
     }
 
@@ -24,15 +26,17 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Instrucciones instrucciones =  new Instrucciones();
-        addObject(instrucciones, 402, 334);
-        Records records =  new Records();
-        addObject(records, 400, 406);
-        Salir salir =  new Salir();
-        addObject(salir, 399, 485);
-        Titulo titulo =  new Titulo();
-        addObject(titulo, 410, 97);
-        play play =  new play();
-        addObject(play, 392, 257);
+
+        Titulo titulo = new Titulo();
+        addObject(titulo,403,79);
+
+        Play play = new Play();
+        addObject(play,405,265);
+        Records records = new Records();
+        addObject(records,406,350);
+        Instrucciones instrucciones = new Instrucciones();
+        addObject(instrucciones,407,434);
+        Salir salir = new Salir();
+        addObject(salir,409,515);
     }
 }
