@@ -15,10 +15,10 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(800, 600, 1); 
+        super(1024, 600, 1); 
         prepare();
     }
+    
 
     /**
      * Prepare the world for the start of the program.
@@ -27,16 +27,10 @@ public class MyWorld extends World
     private void prepare()
     {
 
-        Titulo titulo = new Titulo();
-        addObject(titulo,403,79);
-
-        Play play = new Play();
-        addObject(play,405,265);
-        Records records = new Records();
-        addObject(records,406,350);
-        Instrucciones instrucciones = new Instrucciones();
-        addObject(instrucciones,407,434);
-        Salir salir = new Salir();
-        addObject(salir,409,515);
+        Jugador1 jugador1 = new Jugador1();
+        addObject(jugador1,475,397);
+        Title title = new Title();
+        addObject(title,524,68);
+        jugador1.setLocation(488,452);
     }
 }
