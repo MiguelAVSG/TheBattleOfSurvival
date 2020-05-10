@@ -1,24 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class PantallaInstrucciones here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends World
+public class PantallaInstrucciones extends World
 {
 
     /**
-     * Constructor for objects of class MyWorld.
+     * Constructor for objects of class PantallaInstrucciones.
      * 
      */
-    public MyWorld()
+    public PantallaInstrucciones()
     {    
-        super(1024, 600, 1); 
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(800, 500, 1); 
         prepare();
     }
-    
 
     /**
      * Prepare the world for the start of the program.
@@ -26,12 +26,7 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-
-        Jugador1 jugador1 = new Jugador1();
-        addObject(jugador1,475,397);
-
-        jugador1.setLocation(488,452);
         RegresarMenu regresarMenu = new RegresarMenu();
-        addObject(regresarMenu,904,25);
+        addObject(regresarMenu,661,436);
     }
 }
