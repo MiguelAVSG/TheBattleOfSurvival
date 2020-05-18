@@ -26,7 +26,7 @@ public class PantallaInstrucciones extends World
      */
     private void prepare()
     {
-        RegresarMenu regresarMenu = new RegresarMenu();
+        Regresaalmenu regresarMenu = new Regresaalmenu();
         addObject(regresarMenu,661,436);
     }
 }

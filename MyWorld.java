@@ -30,8 +30,6 @@ public class MyWorld extends World
         Jugador1 jugador1 = new Jugador1();
         addObject(jugador1,475,397);
         jugador1.setLocation(488,455);
-        RegresarMenu regresarMenu = new RegresarMenu();
-        addObject(regresarMenu,904,25);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
     }

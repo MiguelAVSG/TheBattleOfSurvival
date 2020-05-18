@@ -26,7 +26,7 @@ public class PantallaRecords extends World
      */
     private void prepare()
     {
-        RegresarMenu regresarMenu = new RegresarMenu();
+        Regresaalmenu regresarMenu = new Regresaalmenu();
         addObject(regresarMenu,881,545);
     }
 }

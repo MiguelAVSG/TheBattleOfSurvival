@@ -7,5 +7,5 @@ El juego da lugar en un futuro con tecnología muy avanzada en una pequeña ciudad
 ## ¿Cual es el publico objetivo?
 El juego tendrá una dificultad un poco complicada por lo cual el juego será para mayores de 8 en adelante principalmente jovenes que busquen un reto complicado que superar.
 
-##Digrama de clases
+## Digrama de clases
 ![Diagrama de clases](DiagramaClases.png)
