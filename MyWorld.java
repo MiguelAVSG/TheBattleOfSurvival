@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    GreenfootSound mainMusic = new GreenfootSound("maintheme.mp3");
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -32,5 +32,8 @@ public class MyWorld extends World
         jugador.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
+    }
+    public void act(){
+     mainMusic.playLoop();
     }
 }

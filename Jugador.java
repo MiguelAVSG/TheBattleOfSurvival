@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Jugador extends Actor
 {
+    GreenfootSound shotSound = new GreenfootSound("SoundPistolFN.mp3");
     private GreenfootImage[] imagesR = new GreenfootImage [2];
     private GreenfootImage[] imagesL = new GreenfootImage [2];
     
@@ -139,9 +140,10 @@ public class Jugador extends Actor
     } 
     
     public void shot(int direction){
-           if (pressShot && Greenfoot.isKeyDown("g"))
+           if (pressShot && Greenfoot.isKeyDown("k"))
            {
                Bullet bullet= new Bullet(direction);
+               shotSound.play();
                  switch(direction){
                      case 0: getWorld().addObject(bullet,getX()+95,getY()-45);
                              break;
@@ -158,7 +160,7 @@ public class Jugador extends Actor
                  }
                pressShot=false;
             }
-           if(!pressShot && !Greenfoot.isKeyDown("g")){
+           if(!pressShot && !Greenfoot.isKeyDown("k")){
                  pressShot=true;
             }
     }
