@@ -27,9 +27,9 @@ public class MyWorld extends World
     private void prepare()
     {
 
-        Jugador1 jugador1 = new Jugador1();
-        addObject(jugador1,475,397);
-        jugador1.setLocation(488,455);
+        Jugador jugador = new Jugador();
+        addObject(jugador,475,397);
+        jugador.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
     }
