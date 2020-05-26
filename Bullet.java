@@ -5,6 +5,7 @@ public class Bullet extends Actor
 {
     int position;
     int numBu;
+    
     public Bullet(int direction){
         position=direction;
     }
@@ -36,5 +37,25 @@ public class Bullet extends Actor
         if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
            getWorld().removeObject(this);
         }
-    }    
-}
+        else{Actor DragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
+        if(DragonHead != null)
+        {
+            MyWorld world= (MyWorld)getWorld();
+            world.lifeEnemy.decrementar();
+            world.puntos.incrementar();
+            getWorld().removeObject(this);
+            if(world.lifeEnemy.ObtenerValor()==0){
+                world.removeObject(DragonHead);
+              
+                
+            }    
+        }
+       
+       
+       
+        
+    }   
+    
+     
+    
+    }}

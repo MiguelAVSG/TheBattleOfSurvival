@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonHead extends Actor
 {
+    private int Vitalidad = 3;
     private int xVelocity=1;
     private int xDirection=1;
     /**
@@ -24,6 +25,10 @@ public class DragonHead extends Actor
         xDirection = xDirection *-1;
         
         
-    }  
+    }
+    
+    
+    
+    
 }
 }
