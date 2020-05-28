@@ -34,21 +34,35 @@ public class Bullet extends Actor
                    setLocation(getX()-12,getY());
                    break;
         }
+            Actor DragonHead = getOneObjectAtOffset(-3,-2, DragonHead.class);
+            Actor DragonFront = getOneObjectAtOffset(0,0, DragonFront.class);
+            Actor DragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
         if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
            getWorld().removeObject(this);
         }
-        else{Actor DragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
-        if(DragonHead != null)
+        else if(DragonHead != null || DragonFront != null || DragonBody != null)
         {
             MyWorld world= (MyWorld)getWorld();
             world.lifeEnemy.decrementar();
             world.puntos.incrementar();
             getWorld().removeObject(this);
-            if(world.lifeEnemy.ObtenerValor()==0){
+            if(world.lifeEnemy.ObtenerValor()==200){
                 world.removeObject(DragonHead);
-              
-                
+                DragonFront dragonFront =new DragonFront();
+                world.addObject(dragonFront,890,400);
+                dragonFront.shotLacer();
             }    
+            else if(world.lifeEnemy.ObtenerValor()==100){
+                world.removeObject(DragonFront);
+                DragonBody dragonBody =new DragonBody();
+                world.addObject(dragonBody,940,310);
+                
+            
+            }
+            else if(world.lifeEnemy.ObtenerValor()==0){
+               world.removeObject(DragonBody);
+               //you win png
+            }
         }
        
        
@@ -58,4 +72,4 @@ public class Bullet extends Actor
     
      
     
-    }}
+    }

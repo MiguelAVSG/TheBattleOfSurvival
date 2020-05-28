@@ -43,12 +43,12 @@ public class MyWorld extends World
         jugador.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
-        addObject(dragonHead,getWidth()-80,(getHeight()/2+20));
-        lifeEnemy = new LifeEnemy(100,0,0,20);
+        lifeEnemy = new LifeEnemy(201,0,0,20);
         addObject(lifeEnemy,750,85);
+        
     }
     public void act(){
-     mainMusic.playLoop();
+     //mainMusic.playLoop();
     }
     
     
