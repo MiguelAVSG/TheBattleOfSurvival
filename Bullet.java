@@ -45,12 +45,13 @@ public class Bullet extends Actor
             MyWorld world= (MyWorld)getWorld();
             world.lifeEnemy.decrementar();
             world.puntos.incrementar();
-            getWorld().removeObject(this);
+            
             if(world.lifeEnemy.ObtenerValor()==300){
                 Level1 level1= new Level1();
                 world.addObject(level1,500,250);
                 Greenfoot.delay(50);
                 world.removeObject(level1);
+
             }
             else if(world.lifeEnemy.ObtenerValor()==200){
                 world.removeObject(DragonHead);
@@ -77,6 +78,7 @@ public class Bullet extends Actor
                world.removeObject(DragonBody);
                //you win png
             }
+            getWorld().removeObject(this);
         }
        
        

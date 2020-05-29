@@ -27,7 +27,7 @@ public class MyWorld extends World
         vidas =new PuntajeYVidas(3, "Vidas ");
         
         addObject(puntos,150,85);
-        addObject(vidas,300,85);
+        addObject(vidas,301,85);
     }
     
 
