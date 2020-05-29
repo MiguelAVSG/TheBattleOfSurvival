@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonFront extends Actor
 {
-    int alter;
+    private int alter;
+    private int numLacers;
     
     /**
      * Act - do whatever the d wants to do. This method is called whenever
@@ -22,14 +23,38 @@ public class DragonFront extends Actor
     
     public void shotLacer()
     {
-        //int alter= (int) (Math.random() * 2) + 1;
+
+        
         Lacer lacer = new Lacer();
         Lacer lacer2 = new Lacer();
+
+        int alter = (int) Math.floor(Math.random()*2);
+         if(alter==0)
+         {
+             getWorld().addObject(lacer,800,345);
+         }
+         else if(alter==1)
+         {
+             getWorld().addObject(lacer2,970,580);
+         }
         
         
-                getWorld().addObject(lacer,700,345);
-                getWorld().addObject(lacer2,750,550);
-            
+        int alter2 = (int) Math.floor(Math.random()*2);
+         if(alter2==0)
+         {
+             getWorld().addObject(lacer,800,345);
+         }
+         else if(alter2==1)
+         {
+             getWorld().addObject(lacer2,970,580);
+         }
+        
+
+        
+       
+        
     
+    }
+    public int getLacers(){ return numLacers;
     }
 }

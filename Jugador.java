@@ -86,8 +86,8 @@ public class Jugador extends Actor
                 numS=0;
                 direction=0;
                 setImage(imagesS[numS]);
-                Greenfoot.delay(10);
-                 setImage(imagesR[numR]);
+                //Greenfoot.delay(10);
+                 //setImage(imagesR[numR]);
                 
            }
            
@@ -96,8 +96,8 @@ public class Jugador extends Actor
                numS=1;
                direction=1;
                setImage(imagesS[numS]);
-               Greenfoot.delay(10);
-               setImage(imagesL[numL]);
+               //Greenfoot.delay(10);
+               //setImage(imagesL[numL]);
                
            }      
            pressJump=false;

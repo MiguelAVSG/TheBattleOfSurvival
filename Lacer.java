@@ -6,9 +6,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lacer extends Actor
+public class Lacer extends DragonFront
 {
-    private int xVelocity=4;
+    private int xVelocity=3;
     private int xDirection=-1;
     /**
      * Act - do whatever the Lacer wants to do. This method is called whenever
@@ -25,5 +25,6 @@ public class Lacer extends Actor
         if(isAtEdge()){
          getWorld().removeObject(this);
         }
+
     }    
 }

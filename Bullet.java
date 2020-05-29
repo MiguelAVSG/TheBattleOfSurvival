@@ -34,8 +34,8 @@ public class Bullet extends Actor
                    setLocation(getX()-12,getY());
                    break;
         }
-            Actor DragonHead = getOneObjectAtOffset(-3,-2, DragonHead.class);
-            Actor DragonFront = getOneObjectAtOffset(0,0, DragonFront.class);
+            Actor DragonHead = getOneObjectAtOffset(-13,-12, DragonHead.class);
+            Actor DragonFront = getOneObjectAtOffset(-4,-7, DragonFront.class);
             Actor DragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
         if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
            getWorld().removeObject(this);
@@ -48,8 +48,9 @@ public class Bullet extends Actor
             getWorld().removeObject(this);
             if(world.lifeEnemy.ObtenerValor()==200){
                 world.removeObject(DragonHead);
+                Greenfoot.delay(50);
                 DragonFront dragonFront =new DragonFront();
-                world.addObject(dragonFront,890,400);
+                world.addObject(dragonFront,910,400);
                 dragonFront.shotLacer();
             }    
             else if(world.lifeEnemy.ObtenerValor()==100){
