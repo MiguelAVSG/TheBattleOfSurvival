@@ -46,14 +46,27 @@ public class Bullet extends Actor
             world.lifeEnemy.decrementar();
             world.puntos.incrementar();
             getWorld().removeObject(this);
-            if(world.lifeEnemy.ObtenerValor()==200){
-                world.removeObject(DragonHead);
+            if(world.lifeEnemy.ObtenerValor()==300){
+                Level1 level1= new Level1();
+                world.addObject(level1,500,250);
                 Greenfoot.delay(50);
+                world.removeObject(level1);
+            }
+            else if(world.lifeEnemy.ObtenerValor()==200){
+                world.removeObject(DragonHead);
+                Level2 level2= new Level2();
+                world.addObject(level2,500,250);
+                Greenfoot.delay(60);
+                world.removeObject(level2);
                 DragonFront dragonFront =new DragonFront();
                 world.addObject(dragonFront,910,400);
                 dragonFront.shotLacer();
             }    
             else if(world.lifeEnemy.ObtenerValor()==100){
+                Level3 level3= new Level3();
+                world.addObject(level3,500,250);
+                Greenfoot.delay(60);
+                world.removeObject(level3);
                 world.removeObject(DragonFront);
                 DragonBody dragonBody =new DragonBody();
                 world.addObject(dragonBody,940,310);

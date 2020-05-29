@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+;import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class MyWorld here.
@@ -43,12 +43,15 @@ public class MyWorld extends World
         jugador.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
-        lifeEnemy = new LifeEnemy(201,0,0,20);
+        lifeEnemy = new LifeEnemy(300,0,0,20);
         addObject(lifeEnemy,750,85);
+        
+        
+        
         
     }
     public void act(){
-     //mainMusic.playLoop();
+     mainMusic.playLoop();
     }
     
     
