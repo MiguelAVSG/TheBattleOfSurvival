@@ -10,6 +10,19 @@ public class Fire extends DragonHead
 {
     private int xVelocity=2;
     private int xDirection=1;
+    private int indexCount;
+    
+    private GreenfootImage[] imagesF = new GreenfootImage [6];
+    
+    int numF=0;
+        public void addedToWorld(World Latar)
+    {
+        for(int i=0;i<imagesF.length;i++)
+        {
+            imagesF[i]= new GreenfootImage("f"+i+".png");
+            setImage(imagesF[0]);
+        }
+    }
     /**
      * Act - do whatever the fire wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -22,9 +35,18 @@ public class Fire extends DragonHead
        
         setLocation(x + xVelocity * xDirection,y);
         if(isAtEdge()) {
-        xDirection = xDirection *-1;
+          xDirection = xDirection *-1;
         
         
+       }
+       setImage(imagesF[numF]);
+       indexCount++;
+             if(indexCount>7){
+                numF++;
+                indexCount=0;
+             }
+       if(numF>=imagesF.length){
+                 numF=0;
        }
     }    
 }

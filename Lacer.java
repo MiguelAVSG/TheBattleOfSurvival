@@ -18,12 +18,14 @@ public class Lacer extends DragonFront
     {
         // Add your action code here.
         
+        
         int x= getX();
         int y= getY();
         setLocation(x + xVelocity * xDirection,y);
         
         if(isAtEdge()){
          getWorld().removeObject(this);
+         
         }
 
     }    

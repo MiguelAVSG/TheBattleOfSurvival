@@ -21,13 +21,12 @@ public class MyWorld extends World
      */
     public MyWorld()
     {    
-        super(1024, 600, 1); 
-        prepare();
-        puntos =new PuntajeYVidas (0, "Puntaje ");
+        super(1024, 600, 1);
+          puntos =new PuntajeYVidas (0, "Puntaje ");
         vidas =new PuntajeYVidas(3, "Vidas ");
-        
         addObject(puntos,150,85);
         addObject(vidas,301,85);
+        prepare();
     }
     
 
@@ -37,12 +36,13 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-
         Jugador jugador = new Jugador();
         addObject(jugador,475,397);
         jugador.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
+        Fire fire = new Fire();
+        addObject(fire,490,340);
         lifeEnemy = new LifeEnemy(300,0,0,20);
         addObject(lifeEnemy,750,85);
         
@@ -53,10 +53,9 @@ public class MyWorld extends World
     public void act(){
      mainMusic.playLoop();
     }
-    
-    
     public void borrarvida(){
         world.removeObject(lifeEnemy);
     }
+
     
 }
