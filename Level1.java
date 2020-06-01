@@ -16,9 +16,5 @@ public class Level1 extends LevelsSprites
     {
         // Add your action code here.
     }    
-    public void quitsprite()
-    {
-      Greenfoot.delay(50);
-      getWorld().removeObject(this);
-    }
+    
 }

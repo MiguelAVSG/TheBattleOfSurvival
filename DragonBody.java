@@ -15,5 +15,20 @@ public class DragonBody extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+        shot();
+    }
+    
+    public void shot()
+    {
+             int m=Greenfoot.getRandomNumber(200+1);
+       if(m==1)
+       {
+          EnergyBall ball = new EnergyBall();
+          getWorld().addObject(ball, 800 , 345);
+       }else if(m==200){
+           Lacer lacer = new Lacer();
+           getWorld().addObject(lacer, 970 , 580);
+        }
+         
+    } 
 }

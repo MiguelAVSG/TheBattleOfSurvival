@@ -8,8 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonFront extends Actor
 {
-    private int alter;
-    private int numLacers;
     
     /**
      * Act - do whatever the d wants to do. This method is called whenever
@@ -18,43 +16,36 @@ public class DragonFront extends Actor
     public void act() 
     {
         // Add your action code here   
-        
+        shotLacer();
     }  
     
     public void shotLacer()
     {
-
-        
-        Lacer lacer = new Lacer();
-        Lacer lacer2 = new Lacer();
-
-        int alter = (int) Math.floor(Math.random()*2);
-         if(alter==0)
-         {
-             getWorld().addObject(lacer,800,345);
-         }
-         else if(alter==1)
-         {
-             getWorld().addObject(lacer2,970,580);
-         }
-        
-        
-        int alter2 = (int) Math.floor(Math.random()*2);
-         if(alter2==0)
-         {
-             getWorld().addObject(lacer,800,345);
-         }
-         else if(alter2==1)
-         {
-             getWorld().addObject(lacer2,970,580);
-         }
-        
-
-        
-       
-        
-    
-    }
-    public int getLacers(){ return numLacers;
-    }
+             int m=Greenfoot.getRandomNumber(150+1);
+             int n=Greenfoot.getRandomNumber(2);
+       if(m==1)
+       {
+          Lacer lacer = new Lacer();
+          boolean disparollegofinal=false;
+          if (disparollegofinal == false)
+          switch(n){
+                     case 0: 
+                     disparollegofinal = true;
+                     getWorld().addObject(lacer, 800 , 345);
+                     if (lacer.isAtEdge()){
+                         disparollegofinal = false;
+                     }
+                             break;
+                     case 1: 
+                     disparollegofinal = true;
+                     getWorld().addObject(lacer, 970 , 580);
+                     if (lacer.isAtEdge()){
+                         disparollegofinal = false;
+                     }
+                             break;
+                 }
+          
+       } 
+         
+    } 
 }

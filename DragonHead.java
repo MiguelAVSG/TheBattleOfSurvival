@@ -9,10 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class DragonHead extends Actor
 {
     private int Vitalidad = 3;
-    private int xVelocity=2;
+    private int xVelocity=7;
     private int xDirection=1;
-    
-    
+   
+   
     
     /**
      * Act - do whatever the DragonHead wants to do. This method is called whenever
@@ -25,15 +25,19 @@ public class DragonHead extends Actor
         int y= getY();
         setLocation(x + xVelocity * xDirection,y);
         if(isAtEdge()) {
-        xDirection = xDirection *-1;
+           xDirection = xDirection *-1;
         
         
        }
-        
+       int m=Greenfoot.getRandomNumber(100);
+       if(m==1)
+       {
+          Fire fire = new Fire(2);;
+          getWorld().addObject(fire, getX() , getY()-1);
+       }
+         
+    }
     
-    
-    
-    
-      }
+   
 
 }

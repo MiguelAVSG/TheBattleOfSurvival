@@ -16,7 +16,7 @@ public class Play extends Actor
     {
         click();
     }    
-    
+    MyWorld world= (MyWorld)getWorld();
     private void click(){
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new MyWorld());

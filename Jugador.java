@@ -41,8 +41,10 @@ public class Jugador extends Actor
     public void act() 
     {
         int x= getX();
-        int y= getY();
+        int y= 455;
+        int ybend=485;  
         int key;
+        
         
         //RIGTH        
         if(Greenfoot.isKeyDown("d"))
@@ -85,9 +87,11 @@ public class Jugador extends Actor
            if(band==0){
                 numS=0;
                 direction=0;
+                setLocation(x,y);
                 setImage(imagesS[numS]);
-                //Greenfoot.delay(10);
-                 //setImage(imagesR[numR]);
+                //Greenfoot.delay(50);
+                
+                
                 
            }
            
@@ -95,9 +99,11 @@ public class Jugador extends Actor
            {
                numS=1;
                direction=1;
+               setLocation(x,y);
                setImage(imagesS[numS]);
-               //Greenfoot.delay(10);
-               //setImage(imagesL[numL]);
+               //Greenfoot.delay(50);
+               
+               
                
            }      
            pressJump=false;
@@ -112,12 +118,17 @@ public class Jugador extends Actor
              if(band==0){
                 numA=0;
                 direction=4;
+                
+                setLocation(x,ybend);
                 setImage(imagesA[numA]);
-              }
+                
+                }
+              
               else if(band==1)
               {
                 numA=1;
                 direction=5;
+                setLocation(x,ybend);
                 setImage(imagesA[numA]);
               }
        }
@@ -129,12 +140,14 @@ public class Jugador extends Actor
             if(band==0){
                numP=0;
                direction=2;
+               setLocation(x,y);
                setImage(imagesP[numP]);
              }
              else if(band==1)
              {
                numP=1;
                direction=3;
+               setLocation(x,y);
                setImage(imagesP[numP]);
              }
        }

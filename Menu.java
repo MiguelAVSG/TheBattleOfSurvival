@@ -33,9 +33,9 @@ public class Menu extends World
         addObject(play,523,255);
         Instrucciones instrucciones = new Instrucciones();
         addObject(instrucciones,521,350);
-        Records records = new Records();
-        addObject(records,521,437);
+
         Salir salir = new Salir();
         addObject(salir,521,525);
+        instrucciones.setLocation(529,379);
     }
 }
