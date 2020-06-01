@@ -57,7 +57,7 @@ public class Fire extends Actor
             world.vidas.decrementar();
             world.puntos.decrementar();
             getWorld().removeObject(this);
-            if(world.vidas.ObtenerValor()==0){
+            if(world.vidas.ObtenerValor()<=0){
                world.removeObject(Jugador);
                Greenfoot.setWorld(new GameOver());
             }

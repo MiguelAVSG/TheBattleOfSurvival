@@ -21,7 +21,7 @@ public class DragonFront extends Actor
     
     public void shotLacer()
     {
-             int m=Greenfoot.getRandomNumber(150+1);
+             int m=Greenfoot.getRandomNumber(120+1);
              int n=Greenfoot.getRandomNumber(2);
        if(m==1)
        {

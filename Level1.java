@@ -15,6 +15,7 @@ public class Level1 extends LevelsSprites
     public void act() 
     {
         // Add your action code here.
+        
     }    
     
 }

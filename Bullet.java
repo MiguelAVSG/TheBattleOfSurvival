@@ -63,6 +63,7 @@ public class Bullet extends Actor
                 Level2 level2= new Level2();
                 world.addObject(level2,500,250);
                 Greenfoot.delay(60);
+                world.vidas.incrementarvida();
                 world.removeObject(level2);
                 getWorld().removeObject(this);
                 DragonFront dragonFront =new DragonFront();
@@ -75,6 +76,7 @@ public class Bullet extends Actor
                 Level3 level3= new Level3();
                 world.addObject(level3,500,250);
                 Greenfoot.delay(60);
+                world.vidas.incrementarvida();
                 world.removeObject(level3);
                 getWorld().removeObject(this);
                 DragonBody dragonBody =new DragonBody();

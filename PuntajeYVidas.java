@@ -41,10 +41,20 @@ public class PuntajeYVidas extends Actor
         contador = contador+10;
         dibuja();
     }
+    
+    public void incrementarvida(){
+        contador++;
+        dibuja();
+    }
         
     public void decrementar()
     {
         contador--;
+        dibuja();
+    }
+    
+    public void decrementardoble(){
+        contador = contador - 2;
         dibuja();
     }
     

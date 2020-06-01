@@ -15,5 +15,8 @@ public class Level2 extends LevelsSprites
     public void act() 
     {
         // Add your action code here.
+        MyWorld world= (MyWorld)getWorld();
+        world.vidas.incrementarvida();
     }    
+    
 }
