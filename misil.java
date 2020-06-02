@@ -20,17 +20,17 @@ public class misil extends Actor
         int x= getX();
         int y= getY();
         setLocation(x + xVelocity * xDirection,y);
-        Actor Jugador = getOneObjectAtOffset(0,0, Jugador.class); 
+        Actor Player = getOneObjectAtOffset(0,0, Player.class); 
         if(isAtEdge()){
          getWorld().removeObject(this);
-        }else if(Jugador != null)
+        }else if(Player != null)
         {
             MyWorld world= (MyWorld)getWorld();
-            world.vidas.decrementar();
-            world.puntos.decrementar();
+            world.lifes.decrement();
+            world.points.decrement();
             getWorld().removeObject(this);
-            if(world.vidas.ObtenerValor()<=0){
-               world.removeObject(Jugador);
+            if(world.lifes.getValue()<=0){
+               world.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
         }

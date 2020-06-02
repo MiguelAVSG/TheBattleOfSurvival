@@ -17,8 +17,19 @@ public class Fire extends Actor
     private int xDirection=1;
     private int indexCount;
     
-    private GreenfootImage[] imagesF = new GreenfootImage [6];
     
+     private GreenfootImage[] imagesF = new GreenfootImage [6];
+    
+    int numF=0;
+    
+    //public void addedToWorld(World world)
+    {
+        for(int i=0;i<imagesF.length;i++)
+        {
+            imagesF[i]= new GreenfootImage("f"+i+".png");
+            setImage(imagesF[0]);
+        }
+    }
    
 
     /**
@@ -46,24 +57,33 @@ public class Fire extends Actor
         
         
        } 
-       Actor Jugador =(Actor) getOneObjectAtOffset(0,0, Jugador.class);
+       Actor Player =(Actor) getOneObjectAtOffset(0,0, Player.class);
        if(isAtEdge()){
          getWorld().removeObject(this);
         }else
         
-        if(Jugador != null)
+        if(Player != null)
         {
             MyWorld world= (MyWorld)getWorld();
-            world.vidas.decrementar();
-            world.puntos.decrementar();
+            world.lifes.decrement();
+            world.points.decrement();
             getWorld().removeObject(this);
-            if(world.vidas.ObtenerValor()<=0){
-               world.removeObject(Jugador);
+            if(world.lifes.getValue()<=0){
+               world.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
         }
-
-          xDirection = xDirection *-1;
+         xDirection = xDirection *-1;
+         
+       setImage(imagesF[numF]);
+       indexCount++;
+       if(indexCount>7){
+                numF++;
+                indexCount=0;
+       }
+       if(numF>=imagesF.length){
+                 numF=0;
+       }
         
         
        }

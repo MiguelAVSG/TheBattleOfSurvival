@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 
-public class Jugador extends Actor
+public class Player extends Actor
 {
     GreenfootSound shotSound = new GreenfootSound("SoundPistolFN.mp3");
     private GreenfootImage[] imagesR = new GreenfootImage [2];
@@ -170,9 +170,9 @@ public class Jugador extends Actor
                             break;
                      case 3: getWorld().addObject(bullet,getX()-90,getY()-155);
                              break;
-                     case 4: getWorld().addObject(bullet,getX()+95,getY()+5);
+                     case 4: getWorld().addObject(bullet,getX()+90,getY()-15);
                             break;
-                     case 5: getWorld().addObject(bullet,getX()-95,getY()+5);
+                     case 5: getWorld().addObject(bullet,getX()-90,getY()-15);
                              break;
                  }
                pressShot=false;

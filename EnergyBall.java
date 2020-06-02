@@ -8,8 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EnergyBall extends Actor
 {
-    private int xVelocity=5;
-    private int xDirection=-1;
+       
+        int xVelocity=5;
+        int xDirection=-1;
+        
+        
+       int yDirection= (int) (Math.random() * 8) + 1;
+      
+    
     /**
      * Act - do whatever the EnergyBall wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,18 +24,19 @@ public class EnergyBall extends Actor
     {
         int x= getX();
         int y= getY();
-        setLocation(x + xVelocity * xDirection,y);
-        Actor Jugador = getOneObjectAtOffset(0,0, Jugador.class); 
+        setLocation(x+ xVelocity * xDirection ,y + yDirection);
+        Actor Player = getOneObjectAtOffset(0,0, Player.class);
+
         if(isAtEdge()){
          getWorld().removeObject(this);
-        }else if(Jugador != null)
+        }else if(Player != null)
         {
             MyWorld world= (MyWorld)getWorld();
-            world.vidas.decrementardoble();
-            world.puntos.decrementar();
+            world.lifes.decrementdouble();
+            world.points.decrement();
             getWorld().removeObject(this);
-            if(world.vidas.ObtenerValor()<=0){
-               world.removeObject(Jugador);
+            if(world.lifes.getValue()<=0){
+               world.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
         }

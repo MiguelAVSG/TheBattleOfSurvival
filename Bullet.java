@@ -45,26 +45,17 @@ public class Bullet extends Actor
         else if(DragonHead != null || DragonFront != null || DragonBody != null)
         {
             MyWorld world= (MyWorld)getWorld();
-            world.lifeEnemy.decrementar();
-            world.puntos.incrementar();
-            
-
-            if(world.lifeEnemy.ObtenerValor()==300){
-                Level1 level1= new Level1();
-                world.addObject(level1,500,250);
-                Greenfoot.delay(60);
-                world.removeObject(level1);       
-            }
-            else
+            world.lifeEnemy.decrement();
+            world.points.increment();
 
 
-            if(world.lifeEnemy.ObtenerValor()==200){
+            if(world.lifeEnemy.getValue()==200){
 
                 world.removeObject(DragonHead);
                 Level2 level2= new Level2();
                 world.addObject(level2,500,250);
                 Greenfoot.delay(60);
-                world.vidas.incrementarvida();
+                world.lifes.incrementLife();
                 world.removeObject(level2);
                 getWorld().removeObject(this);
                 DragonFront dragonFront =new DragonFront();
@@ -72,12 +63,12 @@ public class Bullet extends Actor
                 
                 
             }    
-            else if(world.lifeEnemy.ObtenerValor() == 100){
+            else if(world.lifeEnemy.getValue() == 100){
                 world.removeObject(DragonFront);
                 Level3 level3= new Level3();
                 world.addObject(level3,500,250);
                 Greenfoot.delay(60);
-                world.vidas.incrementarvida();
+                world.lifes.incrementLife();
                 world.removeObject(level3);
                 getWorld().removeObject(this);
                 DragonBody dragonBody =new DragonBody();
@@ -85,7 +76,7 @@ public class Bullet extends Actor
                 
             
             }
-            else if(world.lifeEnemy.ObtenerValor() == 0){
+            else if(world.lifeEnemy.getValue() == 0){
                world.removeObject(DragonBody);
                getWorld().removeObject(this);
                Greenfoot.setWorld(new YouWin());

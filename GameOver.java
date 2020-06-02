@@ -26,9 +26,10 @@ public class GameOver extends World
      */
     private void prepare()
     {
+        
         Play play = new Play();
         addObject(play,91,450);
-        Regresaalmenu regresaalmenu = new Regresaalmenu();
-        addObject(regresaalmenu,670,454);
+        ReturnToMenu returnToMenu = new ReturnToMenu();
+        addObject(returnToMenu,670,454);
     }
 }

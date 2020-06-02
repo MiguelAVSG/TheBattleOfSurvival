@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonFront extends Actor
 {
-    
+    GreenfootSound lacerSound = new GreenfootSound("lacer.mp3");
     /**
      * Act - do whatever the d wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -26,22 +26,23 @@ public class DragonFront extends Actor
        if(m==1)
        {
           Lacer lacer = new Lacer();
+          Greenfoot.playSound("lacer.mp3");
           boolean disparollegofinal=false;
           if (disparollegofinal == false)
           switch(n){
                      case 0: 
-                     disparollegofinal = true;
-                     getWorld().addObject(lacer, 800 , 345);
-                     if (lacer.isAtEdge()){
-                         disparollegofinal = false;
-                     }
+                             disparollegofinal = true;
+                             getWorld().addObject(lacer, 780 , 345);
+                             if (lacer.isAtEdge()){
+                              disparollegofinal = false;
+                             }
                              break;
                      case 1: 
-                     disparollegofinal = true;
-                     getWorld().addObject(lacer, 970 , 580);
-                     if (lacer.isAtEdge()){
-                         disparollegofinal = false;
-                     }
+                             disparollegofinal = true;
+                             getWorld().addObject(lacer, 990 , 580);
+                             if (lacer.isAtEdge()){
+                              disparollegofinal = false;
+                             } 
                              break;
                  }
           

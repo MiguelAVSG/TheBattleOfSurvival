@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonBody extends Actor
 {
+    GreenfootSound canonSound = new GreenfootSound("CanonDragonSoundFN.mp3");
+    GreenfootSound misilSound = new GreenfootSound("misil.mp3");
     /**
      * Act - do whatever the DragonBody wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -25,11 +27,13 @@ public class DragonBody extends Actor
        if(energyBall==100)
        {
           EnergyBall ball = new EnergyBall();
-          getWorld().addObject(ball, 800 , 345);
+          getWorld().addObject(ball, 800 , 180);
+          Greenfoot.playSound("CanonDragonSoundFN.mp3");
        }
        if(misil==110){
            misil misi = new misil();
            getWorld().addObject(misi, 970 , 580);
+           misilSound.play();
         }
          
     } 

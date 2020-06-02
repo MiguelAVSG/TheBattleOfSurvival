@@ -16,7 +16,7 @@ public class Level2 extends Actor
     {
         // Add your action code here.
         MyWorld world= (MyWorld)getWorld();
-        world.vidas.incrementarvida();
+        world.lifes.incrementLife();
     }    
     
 }

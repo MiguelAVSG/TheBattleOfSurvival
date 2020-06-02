@@ -11,6 +11,7 @@ public class DragonHead extends Actor
     private int Vitalidad = 3;
     private int xVelocity=7;
     private int xDirection=1;
+    GreenfootSound fireSound = new GreenfootSound("Firedragon.mp3");
    
    
     
@@ -38,6 +39,7 @@ public class DragonHead extends Actor
        if(m==1)
        {
           Fire fire = new Fire(2);
+          Greenfoot.playSound("Firedragon.mp3");
           getWorld().addObject(fire, getX() , getY()-1);
        }
            

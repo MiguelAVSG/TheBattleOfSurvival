@@ -11,8 +11,8 @@ public class MyWorld extends World
     
     MyWorld world;
     GreenfootSound mainMusic = new GreenfootSound("maintheme.mp3");
-    PuntajeYVidas puntos;
-    PuntajeYVidas vidas;
+    PointsAndLife points;
+    PointsAndLife lifes;
     LifeEnemy lifeEnemy;
     
     /**
@@ -25,11 +25,11 @@ public class MyWorld extends World
         super(1024, 600, 1); 
         prepare();
         
-        puntos =new PuntajeYVidas (0, "Puntaje ");
-        vidas =new PuntajeYVidas(3, "Vidas ");
+        points =new PointsAndLife (0, "Puntaje ");
+        lifes =new PointsAndLife(5, "Vidas ");
         Greenfoot.delay(50);
-        addObject(puntos,150,85);
-        addObject(vidas,150,115);
+        addObject(points,150,85);
+        addObject(lifes,150,115);
 
         
           
@@ -43,9 +43,9 @@ public class MyWorld extends World
      */
     private void prepare()
     {
-        Jugador jugador = new Jugador();
-        addObject(jugador,475,397);
-        jugador.setLocation(488,455);
+        Player player = new Player();
+        addObject(player,475,397);
+        player.setLocation(488,455);
         DragonHead dragonHead = new DragonHead();
         addObject(dragonHead,490,78);
 

@@ -26,7 +26,7 @@ public class YouWin extends World
      */
     private void prepare()
     {
-        Regresaalmenu regresaalmenu = new Regresaalmenu();
-        addObject(regresaalmenu,671,463);
+        ReturnToMenu returnToMenu = new ReturnToMenu();
+        addObject(returnToMenu,671,463);
     }
 }
