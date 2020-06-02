@@ -45,114 +45,11 @@ public class Player extends Actor
         int ybend=485;  
         int key;
         
-        
-        //RIGTH        
-        if(Greenfoot.isKeyDown("d"))
-        {
-           setImage(imagesR[numR]);
-           band=0;
-           direction=0;
-           indexCount++;
-             if(indexCount>7){
-                numR++;
-                indexCount=0;
-                setLocation(x+15,y);
-             }
-             if(numR>=imagesR.length){
-                 numR=0;
-             }
-        }
-        
-        
-        //LEFT
-        else if(Greenfoot.isKeyDown("a"))
-        {
-            setImage(imagesL[numL]);
-            band=1;
-            direction=1;
-            indexCount++;
-               if(indexCount>7){
-                numL++;
-                indexCount=0;
-                setLocation(x-15,y);
-               }
-               if(numL>=imagesL.length){
-                 numL=0;
-               }
-        }
-        
-        //JUMP
-        else if(pressJump && Greenfoot.isKeyDown("space"))
-        {
-           if(band==0){
-                numS=0;
-                direction=0;
-                setLocation(x,y);
-                setImage(imagesS[numS]);
-                //Greenfoot.delay(50);
-                
-                
-                
-           }
-           
-           else if(band==1)
-           {
-               numS=1;
-               direction=1;
-               setLocation(x,y);
-               setImage(imagesS[numS]);
-               //Greenfoot.delay(50);
-               
-               
-               
-           }      
-           pressJump=false;
-          }
-          else if(!pressJump && !Greenfoot.isKeyDown("space")){
-                 pressJump=true;
-          }
-       
-        //BEND
-        else if(Greenfoot.isKeyDown("s"))
-        {
-             if(band==0){
-                numA=0;
-                direction=4;
-                
-                setLocation(x,ybend);
-                setImage(imagesA[numA]);
-                
-                }
-              
-              else if(band==1)
-              {
-                numA=1;
-                direction=5;
-                setLocation(x,ybend);
-                setImage(imagesA[numA]);
-              }
-       }
-       
-      
-       //AIM UP
-        else if(Greenfoot.isKeyDown("w"))
-        {
-            if(band==0){
-               numP=0;
-               direction=2;
-               setLocation(x,y);
-               setImage(imagesP[numP]);
-             }
-             else if(band==1)
-             {
-               numP=1;
-               direction=3;
-               setLocation(x,y);
-               setImage(imagesP[numP]);
-             }
-       }
-       
-       //FUNCTION SHOT
+        WalkRight();
+        WalkLeft();
+        Jump();
+        Bend();
+       AimpUp();
        shot(direction);
     } 
     
@@ -180,5 +77,120 @@ public class Player extends Actor
            if(!pressShot && !Greenfoot.isKeyDown("k")){
                  pressShot=true;
             }
+            
+         
+            
     }
+    
+    public void WalkRight(){
+         int x= getX();
+        int y= 455;       
+        if(Greenfoot.isKeyDown("d"))
+        {
+           setImage(imagesR[numR]);
+           band=0;
+           direction=0;
+           indexCount++;
+             if(indexCount>7){
+                numR++;
+                indexCount=0;
+                setLocation(x+15,y);
+             }
+             if(numR>=imagesR.length){
+                 numR=0;
+             }
+        }
+            }
+            
+    public void WalkLeft(){
+        int x= getX();
+        int y= 455;  
+        if(Greenfoot.isKeyDown("a"))
+        {
+            setImage(imagesL[numL]);
+            band=1;
+            direction=1;
+            indexCount++;
+               if(indexCount>7){
+                numL++;
+                indexCount=0;
+                setLocation(x-15,y);
+               }
+               if(numL>=imagesL.length){
+                 numL=0;
+               }
+        }
+    }
+    
+    public void Jump(){
+        int x= getX();
+        int y= 455;  
+        if(pressJump && Greenfoot.isKeyDown("space"))
+        {
+           if(band==0){
+                numS=0;
+                direction=0;
+                setLocation(x,y);
+                setImage(imagesS[numS]);
+           }
+           
+           else if(band==1)
+           {
+               numS=1;
+               direction=1;
+               setLocation(x,y);
+               setImage(imagesS[numS]);
+           }      
+           pressJump=false;
+          }
+          else if(!pressJump && !Greenfoot.isKeyDown("space")){
+                 pressJump=true;
+          }
+    }
+    
+    public void Bend(){
+         int x = getX();
+         int ybend=485; 
+        if(Greenfoot.isKeyDown("s"))
+        {
+             if(band==0){
+                numA=0;
+                direction=4;
+                
+                setLocation(x,ybend);
+                setImage(imagesA[numA]);
+                
+                }
+              
+              else if(band==1)
+              {
+                numA=1;
+                direction=5;
+                setLocation(x,ybend);
+                setImage(imagesA[numA]);
+              }
+       }
+    }
+    
+    public void AimpUp(){
+        int x= getX();
+        int y= 455;  
+        if(Greenfoot.isKeyDown("w"))
+        {
+            if(band==0){
+               numP=0;
+               direction=2;
+               setLocation(x,y);
+               setImage(imagesP[numP]);
+             }
+             else if(band==1)
+             {
+               numP=1;
+               direction=3;
+               setLocation(x,y);
+               setImage(imagesP[numP]);
+             }
+       }
+    }
+    
 }
