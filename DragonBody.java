@@ -22,15 +22,15 @@ public class DragonBody extends Actor
     
     public void shot()
     {
-             int misil=Greenfoot.getRandomNumber(170+1);
-             int energyBall=Greenfoot.getRandomNumber(200+1);
+             int misil=Greenfoot.getRandomNumber(80+1);
+             int energyBall=Greenfoot.getRandomNumber(120+1);
        if(energyBall==100)
        {
           EnergyBall ball = new EnergyBall();
           getWorld().addObject(ball, 800 , 180);
           Greenfoot.playSound("CanonDragonSoundFN.mp3");
        }
-       if(misil==110){
+       if(misil==11){
            misil misi = new misil();
            getWorld().addObject(misi, 970 , 580);
            misilSound.play();
