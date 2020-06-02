@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class misil extends Actor
 {
-    private int xVelocity=7;
+    private int xVelocity=9;
     private int xDirection=-1;
     /**
      * Act - do whatever the misil wants to do. This method is called whenever

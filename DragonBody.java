@@ -27,7 +27,7 @@ public class DragonBody extends Actor
           EnergyBall ball = new EnergyBall();
           getWorld().addObject(ball, 800 , 345);
        }
-       if(misil==100){
+       if(misil==110){
            misil misi = new misil();
            getWorld().addObject(misi, 970 , 580);
         }

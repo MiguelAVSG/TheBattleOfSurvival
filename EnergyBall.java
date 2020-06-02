@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EnergyBall extends Actor
 {
-    private int xVelocity=2;
+    private int xVelocity=5;
     private int xDirection=-1;
     /**
      * Act - do whatever the EnergyBall wants to do. This method is called whenever

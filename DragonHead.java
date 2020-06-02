@@ -29,15 +29,23 @@ public class DragonHead extends Actor
         
         
        }
-       int m=Greenfoot.getRandomNumber(100);
+       
+       fireShot();
+    }
+         
+    public void fireShot(){
+           int m=Greenfoot.getRandomNumber(80);
        if(m==1)
        {
           Fire fire = new Fire(2);
           getWorld().addObject(fire, getX() , getY()-1);
        }
-         
-    }
+           
+        }
+        
+        
+}
     
    
 
-}
+

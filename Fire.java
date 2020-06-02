@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Fire extends Actor
 
     {
-    private int yVelocity=2;
+    private int yVelocity=3;
     private int yDirection=1;
     int dir;
     private int xVelocity=2;

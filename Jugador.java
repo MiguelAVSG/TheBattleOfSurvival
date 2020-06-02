@@ -56,7 +56,7 @@ public class Jugador extends Actor
              if(indexCount>7){
                 numR++;
                 indexCount=0;
-                setLocation(x+10,y);
+                setLocation(x+15,y);
              }
              if(numR>=imagesR.length){
                  numR=0;
@@ -74,7 +74,7 @@ public class Jugador extends Actor
                if(indexCount>7){
                 numL++;
                 indexCount=0;
-                setLocation(x-10,y);
+                setLocation(x-15,y);
                }
                if(numL>=imagesL.length){
                  numL=0;

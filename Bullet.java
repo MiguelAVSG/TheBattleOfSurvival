@@ -9,6 +9,7 @@ public class Bullet extends Actor
     public Bullet(int direction){
         position=direction;
     }
+    
     public void act() 
     {
         
@@ -68,7 +69,7 @@ public class Bullet extends Actor
                 getWorld().removeObject(this);
                 DragonFront dragonFront =new DragonFront();
                 world.addObject(dragonFront,910,400);
-                dragonFront.shotLacer();
+                
                 
             }    
             else if(world.lifeEnemy.ObtenerValor() == 100){
@@ -81,7 +82,7 @@ public class Bullet extends Actor
                 getWorld().removeObject(this);
                 DragonBody dragonBody =new DragonBody();
                 world.addObject(dragonBody,940,310);
-                dragonBody.shot();
+                
             
             }
             else if(world.lifeEnemy.ObtenerValor() == 0){
@@ -95,7 +96,7 @@ public class Bullet extends Actor
        
        
         
-    }   
+        }   
+   }
 }
-     }
     

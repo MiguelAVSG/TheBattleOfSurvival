@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Level1 extends LevelsSprites
+public class Level1 extends Actor
 {
     /**
      * Act - do whatever the Level1 wants to do. This method is called whenever
@@ -15,7 +15,7 @@ public class Level1 extends LevelsSprites
     public void act() 
     {
         // Add your action code here.
-        
-    }    
+           
     
+}
 }
