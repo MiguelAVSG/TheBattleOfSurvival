@@ -57,7 +57,25 @@ public class Fire extends Actor
         
         
        } 
-       Actor Player =(Actor) getOneObjectAtOffset(0,0, Player.class);
+       DañoPersonaje();
+       
+         xDirection = xDirection *-1;
+         
+       setImage(imagesF[numF]);
+       indexCount++;
+       if(indexCount>7){
+                numF++;
+                indexCount=0;
+       }
+       if(numF>=imagesF.length){
+                 numF=0;
+       }
+        
+        
+       }
+       
+       private void DañoPersonaje(){
+           Actor Player =(Actor) getOneObjectAtOffset(0,0, Player.class);
        if(isAtEdge()){
          getWorld().removeObject(this);
         }else
@@ -73,20 +91,7 @@ public class Fire extends Actor
                Greenfoot.setWorld(new GameOver());
             }
         }
-         xDirection = xDirection *-1;
-         
-       setImage(imagesF[numF]);
-       indexCount++;
-       if(indexCount>7){
-                numF++;
-                indexCount=0;
-       }
-       if(numF>=imagesF.length){
-                 numF=0;
-       }
-        
-        
-       }
+        }
          
 }   
 

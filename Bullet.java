@@ -42,52 +42,26 @@ public class Bullet extends Actor
         if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
            getWorld().removeObject(this);
         }
-        else if(DragonHead != null || DragonFront != null || DragonBody != null)
+        else if(DragonHead != null )
         {
             MyWorld world= (MyWorld)getWorld();
-            world.lifeEnemy.decrement();
-            world.points.increment();
-
-
-            if(world.lifeEnemy.getValue()==200){
-
-                world.removeObject(DragonHead);
-                Level2 level2= new Level2();
-                world.addObject(level2,500,250);
-                Greenfoot.delay(60);
-                world.lifes.incrementLife();
-                world.removeObject(level2);
-                getWorld().removeObject(this);
-                DragonFront dragonFront =new DragonFront();
-                world.addObject(dragonFront,910,400);
-                
-                
-            }    
-            else if(world.lifeEnemy.getValue() == 100){
-                world.removeObject(DragonFront);
-                Level3 level3= new Level3();
-                world.addObject(level3,500,250);
-                Greenfoot.delay(60);
-                world.lifes.incrementLife();
-                world.removeObject(level3);
-                getWorld().removeObject(this);
-                DragonBody dragonBody =new DragonBody();
-                world.addObject(dragonBody,940,310);
-                
             
-            }
-            else if(world.lifeEnemy.getValue() == 0){
-               world.removeObject(DragonBody);
-               getWorld().removeObject(this);
-               Greenfoot.setWorld(new YouWin());
-            }else {
-                getWorld().removeObject(this);
-            }
+            world.vidasenemigo.decrement();
+            world.points.increment();
+            getWorld().removeObject(this);
+        }else if(DragonFront != null )
+        {
+            Nivel2 nivel2= (Nivel2)getWorld();
+            
+            nivel2.vidasenemigo.decrement();
+            nivel2.points.increment();
+            getWorld().removeObject(this);
+        }
        
        
        
         
         }   
    }
-}
+
     

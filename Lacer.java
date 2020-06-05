@@ -24,21 +24,26 @@ public class Lacer extends Actor
         int x= getX();
         int y= getY();
         setLocation(x + xVelocity * xDirection,y);
-        Actor Jugador = getOneObjectAtOffset(0,0, Player.class); 
-        if(isAtEdge()){
+        
+        DañoPersonaje();
+    }    
+    
+    private void DañoPersonaje(){
+           Actor Player =(Actor) getOneObjectAtOffset(0,0, Player.class);
+       if(isAtEdge()){
          getWorld().removeObject(this);
-
-        }else if(Jugador != null)
+        }else
+        
+        if(Player != null)
         {
-            MyWorld world= (MyWorld)getWorld();
-            world.lifes.decrement();
-            world.points.decrement();
+            Nivel2 nivel2 = (Nivel2)getWorld();
+            nivel2.lifes.decrement();
+            nivel2.points.decrement();
             getWorld().removeObject(this);
-            if(world.lifes.getValue()<=0){
-               world.removeObject(Jugador);
+            if(nivel2.lifes.getValue()<=0){
+               nivel2.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
-
         }
-    }    
+        }
 }

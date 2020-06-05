@@ -1,35 +1,37 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyWorld here.
+ * Write a description of class Nivel3 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyWorld extends Niveles
+public class Nivel3 extends Niveles
 {
-    
-    
-    
+
+    /**
+     * Constructor for objects of class Nivel3.
+     * 
+     */
     PointsAndLife points;
     PointsAndLife lifes;
     PointsAndLife vidasenemigo;
-    DragonHead dragonHead = new DragonHead();
+    DragonBody dragonBody = new DragonBody();
     
     
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public MyWorld()
+    public Nivel3(PointsAndLife lifes, PointsAndLife points)
     {    
-
+        
         
         prepare();
         
-        points = new PointsAndLife (0, "Puntaje: ");
-        lifes = new PointsAndLife(5, "Vidas: ");
-        vidasenemigo = new PointsAndLife(300, "Enemigo: ");
+        this.points = new PointsAndLife (points.counter , "Puntaje: ");
+        this.lifes = new PointsAndLife(lifes.counter, "Vidas: ");
+        vidasenemigo = new PointsAndLife(200, "Enemigo: ");
        
         addObject(points,150,85);
         addObject(lifes,150,115);
@@ -50,7 +52,7 @@ public class MyWorld extends Niveles
     {
         
         
-        addObject(dragonHead,490,78);
+        addObject(dragonBody,910,400);
         
        
        
@@ -67,22 +69,23 @@ public class MyWorld extends Niveles
     
     
     
-    public void PasarNivel(){
-        
-        if(vidasenemigo.getValue()==200){
-
-                removeObject(dragonHead);
-                
-                
-                
-                lifes.incrementLife();
-                
-                
-                Greenfoot.setWorld(new SaveScreen(lifes, points));
-                
-                
-                
-            } 
-    }
     
+     
+    public void PasarNivel(){
+        if(vidasenemigo.getValue() == 100){
+               
+                
+               removeObject(dragonBody);
+                
+                
+                
+                
+                
+                
+                Greenfoot.setWorld(new YouWin());
+                
+            
+            }
+       
+    }
 }

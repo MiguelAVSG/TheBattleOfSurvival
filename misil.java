@@ -25,12 +25,12 @@ public class misil extends Actor
          getWorld().removeObject(this);
         }else if(Player != null)
         {
-            MyWorld world= (MyWorld)getWorld();
-            world.lifes.decrement();
-            world.points.decrement();
+            Nivel3 nivel3= (Nivel3)getWorld();
+            nivel3.lifes.decrement();
+            nivel3.points.decrement();
             getWorld().removeObject(this);
-            if(world.lifes.getValue()<=0){
-               world.removeObject(Player);
+            if(nivel3.lifes.getValue()<=0){
+               nivel3.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
         }

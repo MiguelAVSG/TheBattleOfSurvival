@@ -31,11 +31,14 @@ public class Menu extends World
 
         Play play = new Play();
         addObject(play,523,255);
-        Instructions instructions = new Instructions();
-        addObject(instructions,521,350);
 
         Exit exit = new Exit();
         addObject(exit,521,525);
-        instructions.setLocation(529,379);
+
+        LoadGame cargarPartida = new LoadGame();
+        addObject(cargarPartida,523,336);
+        Instructions instructions = new Instructions();
+        addObject(instructions,524,418);
+        
     }
 }
