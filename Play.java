@@ -19,7 +19,7 @@ public class Play extends Actor
     
     private void click(){
         if (Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new MyWorld());
+            Greenfoot.setWorld(new Nivel1());
         }
     }
 }

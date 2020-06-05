@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonBody extends Actor
 {
-    GreenfootSound canonSound = new GreenfootSound("CanonDragonSoundFN.mp3");
-    GreenfootSound misilSound = new GreenfootSound("misil.mp3");
+    private GreenfootSound canonSound = new GreenfootSound("CanonDragonSoundFN.mp3");
+    private GreenfootSound misilSound = new GreenfootSound("misil.mp3");
     /**
      * Act - do whatever the DragonBody wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

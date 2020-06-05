@@ -8,8 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class SaveScreen extends World
 {
-    private PointsAndLife life;
-    private PointsAndLife points;
+    PointsAndLife life;
+    PointsAndLife points;
     /**
      * Constructor for objects of class SaveScreen.
      * 
@@ -29,14 +29,13 @@ public class SaveScreen extends World
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
-    {
-        SaveGame saveGame = new SaveGame();
-        addObject(saveGame,225,477);
-        NextLevel2 nextLevel = new NextLevel2(life, points);
+    {int nivel = 2;
+        SaveButton saveButton = new SaveButton(life.getValue(), points.getValue(), nivel);
+        addObject(saveButton,225,477);
+        NextLevel2 nextLevel = new NextLevel2(life.getValue(), points.getValue());
         addObject(nextLevel,554,488);
        
-        saveGame.setLocation(140,498);
-        saveGame.setLocation(124,503);
+        
         Play play = new Play();
         addObject(play,439,487);
         play.setLocation(471,485);

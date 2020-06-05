@@ -13,9 +13,9 @@ public class PointsAndLife extends Actor
      * Act - do whatever the PuntajeYVidas wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    GreenfootImage image;
-    int counter;
-    String message;
+    private GreenfootImage image;
+    private int counter;
+    private String message;
     
     
     

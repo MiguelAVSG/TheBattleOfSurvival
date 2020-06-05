@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Bullet extends Actor
 {
-    int position;
-    int numBu;
+    private int position;
+    private int numBu;
     
     public Bullet(int direction){
         position=direction;
@@ -35,6 +35,14 @@ public class Bullet extends Actor
                    setLocation(getX()-12,getY());
                    break;
         }
+            
+          
+        DañosDragones();
+        
+        
+        }   
+        
+        private void DañosDragones(){
             Actor DragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
             Actor DragonFront = getOneObjectAtOffset(-4,-7, DragonFront.class);
             Actor DragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
@@ -44,10 +52,10 @@ public class Bullet extends Actor
         }
         else if(DragonHead != null )
         {
-            MyWorld world= (MyWorld)getWorld();
+            Nivel1 nivel1= (Nivel1)getWorld();
             
-            world.vidasenemigo.decrement();
-            world.points.increment();
+            nivel1.vidasenemigo.decrement();
+            nivel1.points.increment();
             getWorld().removeObject(this);
         }else if(DragonFront != null )
         {
@@ -56,12 +64,14 @@ public class Bullet extends Actor
             nivel2.vidasenemigo.decrement();
             nivel2.points.increment();
             getWorld().removeObject(this);
+        }else if(DragonBody != null )
+        {
+            Nivel3 nivel3= (Nivel3)getWorld();
+            
+            nivel3.vidasenemigo.decrement();
+            nivel3.points.increment();
+            getWorld().removeObject(this);
         }
-       
-       
-       
-        
-        }   
    }
-
+}
     

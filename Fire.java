@@ -12,15 +12,12 @@ public class Fire extends Actor
     {
     private int yVelocity=3;
     private int yDirection=1;
-    int dir;
+    private int dir;
     private int xVelocity=2;
     private int xDirection=1;
     private int indexCount;
-    
-    
-     private GreenfootImage[] imagesF = new GreenfootImage [6];
-    
-    int numF=0;
+    private GreenfootImage[] imagesF = new GreenfootImage [6];
+    private int numF=0;
     
     //public void addedToWorld(World world)
     {
@@ -82,12 +79,12 @@ public class Fire extends Actor
         
         if(Player != null)
         {
-            MyWorld world= (MyWorld)getWorld();
-            world.lifes.decrement();
-            world.points.decrement();
+            Nivel1 nivel1= (Nivel1)getWorld();
+            nivel1.lifes.decrement();
+            nivel1.points.decrement();
             getWorld().removeObject(this);
-            if(world.lifes.getValue()<=0){
-               world.removeObject(Player);
+            if(nivel1.lifes.getValue()<=0){
+               nivel1.removeObject(Player);
                Greenfoot.setWorld(new GameOver());
             }
         }

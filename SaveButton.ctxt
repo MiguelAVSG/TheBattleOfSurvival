@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=SaveButton
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ SaveButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=lifes\ points\ level
+comment1.target=SaveButton(int,\ int,\ int)
+comment2.params=lifes\ points\ level
+comment2.target=SaveButton\ getSaveGame(int,\ int,\ int)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=lifes\ points\ level
+comment4.target=void\ SetAll(int,\ int,\ int)
+numComments=5

@@ -1,38 +1,38 @@
-
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Nivel2 here.
+ * Write a description of class MyWorld here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Nivel2 extends Niveles
+public class Nivel1 extends Niveles
 {
+    
     
     
     PointsAndLife points;
     PointsAndLife lifes;
     PointsAndLife vidasenemigo;
-    DragonFront dragonFront = new DragonFront();
+    DragonHead dragonHead = new DragonHead();
     
     
     /**
      * Constructor for objects of class MyWorld.
      * 
      */
-    public Nivel2(int lifes, int points)
+    public Nivel1()
     {    
-        
+
         
         prepare();
         
-        this.points = new PointsAndLife (points , "Puntaje: ");
-        this.lifes = new PointsAndLife(lifes, "Vidas: ");
-        vidasenemigo = new PointsAndLife(200, "Enemigo: ");
+        points = new PointsAndLife (0, "Puntaje: ");
+        lifes = new PointsAndLife(5, "Vidas: ");
+        vidasenemigo = new PointsAndLife(300, "Enemigo: ");
        
-        addObject(this.points,150,85);
-        addObject(this.lifes,150,115);
+        addObject(points,150,85);
+        addObject(lifes,150,115);
         addObject(vidasenemigo, 500, 85);
         
         PasarNivel();
@@ -49,8 +49,8 @@ public class Nivel2 extends Niveles
     private void prepare()
     {
         
-       
-        addObject(dragonFront,910,400);
+        
+        addObject(dragonHead,490,78);
         
        
        
@@ -67,23 +67,22 @@ public class Nivel2 extends Niveles
     
     
     
-    
-     
     public void PasarNivel(){
-        if(vidasenemigo.getValue() == 100){
-               
-                
-               removeObject(dragonFront);
+        
+        if(vidasenemigo.getValue()==200){
+
+                removeObject(dragonHead);
                 
                 
                 
                 lifes.incrementLife();
                 
                 
-                Greenfoot.setWorld(new SavedScreen2(lifes, points));
+                Greenfoot.setWorld(new SaveScreen(lifes, points));
                 
-            
-            }
-       
+                
+                
+            } 
     }
+    
 }

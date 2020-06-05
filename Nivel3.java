@@ -23,18 +23,18 @@ public class Nivel3 extends Niveles
      * Constructor for objects of class MyWorld.
      * 
      */
-    public Nivel3(PointsAndLife lifes, PointsAndLife points)
+    public Nivel3(int lifes, int points)
     {    
         
         
         prepare();
         
-        this.points = new PointsAndLife (points.counter , "Puntaje: ");
-        this.lifes = new PointsAndLife(lifes.counter, "Vidas: ");
+        this.points = new PointsAndLife (points , "Puntaje: ");
+        this.lifes = new PointsAndLife(lifes, "Vidas: ");
         vidasenemigo = new PointsAndLife(200, "Enemigo: ");
        
-        addObject(points,150,85);
-        addObject(lifes,150,115);
+        addObject(this.points,150,85);
+        addObject(this.lifes,150,115);
         addObject(vidasenemigo, 500, 85);
         
         PasarNivel();

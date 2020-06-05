@@ -8,14 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class NextLevel3 extends Actor
 {
-    private PointsAndLife vidas;
-    private PointsAndLife puntaje;
+    private int vidas;
+    private int puntaje;
    
     /**
      * Act - do whatever the NextLevel2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public NextLevel3(PointsAndLife vidas,PointsAndLife puntaje) 
+    public NextLevel3(int vidas,int puntaje) 
     {
         this.vidas = vidas;
         this.puntaje = puntaje;

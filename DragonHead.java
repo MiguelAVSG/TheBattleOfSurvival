@@ -11,7 +11,7 @@ public class DragonHead extends Actor
     private int Vitalidad = 3;
     private int xVelocity=7;
     private int xDirection=1;
-    GreenfootSound fireSound = new GreenfootSound("Firedragon.mp3");
+    private GreenfootSound fireSound = new GreenfootSound("Firedragon.mp3");
    
    
     

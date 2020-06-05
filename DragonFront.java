@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DragonFront extends Actor
 {
-    GreenfootSound lacerSound = new GreenfootSound("lacer.mp3");
+    private GreenfootSound lacerSound = new GreenfootSound("lacer.mp3");
     /**
      * Act - do whatever the d wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
