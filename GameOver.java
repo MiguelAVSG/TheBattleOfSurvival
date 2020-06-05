@@ -26,7 +26,6 @@ public class GameOver extends World
      */
     private void prepare()
     {
-        
         Play play = new Play();
         addObject(play,91,450);
         ReturnToMenu returnToMenu = new ReturnToMenu();

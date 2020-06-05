@@ -8,11 +8,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class EnergyBall extends Actor
 {
-       
     private int xVelocity=5;
     private int xDirection=-1;
     private int yDirection= (int) (Math.random() * 8) + 1;
-      
     
     /**
      * Act - do whatever the EnergyBall wants to do. This method is called whenever

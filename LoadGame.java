@@ -1,11 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*; 
 
-/**
- * Write a description of class CargarPartida here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class LoadGame extends Actor
 {
     SaveGame saveGame = SaveGame.getSaveGame();
@@ -18,18 +12,15 @@ public class LoadGame extends Actor
             datos = saveGame.readFile("Saves.txt");
             game(datos);
         }
-        
     }
     
     public void game(int[] datos){
         int mision2=2, mision3=3;
         if(datos[2] == mision2){
             Greenfoot.setWorld(new Nivel2(datos[0],datos[1]));
-            
         }
         if(datos[2] == mision3){
             Greenfoot.setWorld(new Nivel3(datos[0],datos[1]));
-           
         }
     }
 }

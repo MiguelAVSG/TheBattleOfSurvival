@@ -10,16 +10,12 @@ public class SaveScreen extends World
 {
     PointsAndLife life;
     PointsAndLife points;
-    /**
-     * Constructor for objects of class SaveScreen.
-     * 
-     */
+    
     public SaveScreen(PointsAndLife life, PointsAndLife points)
     {    
         super(870, 550, 1);
         this.points = points;
         this.life = life;
-         
         prepare();
         
     }
@@ -34,8 +30,6 @@ public class SaveScreen extends World
         addObject(saveButton,225,477);
         NextLevel2 nextLevel = new NextLevel2(life.getValue(), points.getValue());
         addObject(nextLevel,554,488);
-       
-        
         Play play = new Play();
         addObject(play,439,487);
         play.setLocation(471,485);

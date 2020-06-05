@@ -12,9 +12,42 @@ public class Bullet extends Actor
     
     public void act() 
     {
-        
-        
         setImage("bullet"+numBu+".png");
+        BulletPotition();
+        DañosDragones();
+        
+        }   
+        
+        private void DañosDragones(){
+            Actor dragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
+            Actor dragonFront = getOneObjectAtOffset(-4,-7, DragonFront.class);
+            Actor dragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
+        if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
+           getWorld().removeObject(this);
+        }
+        else if(dragonHead != null )
+        {
+            Nivel1 nivel1= (Nivel1)getWorld();
+            nivel1.vidasenemigo.decrement();
+            nivel1.points.increment();
+            getWorld().removeObject(this);
+        }else if(dragonFront != null )
+        {
+            Nivel2 nivel2= (Nivel2)getWorld();
+            nivel2.vidasenemigo.decrement();
+            nivel2.points.increment();
+            getWorld().removeObject(this);
+        }else if(dragonBody != null )
+        {
+            Nivel3 nivel3= (Nivel3)getWorld();
+            nivel3.vidasenemigo.decrement();
+            nivel3.points.increment();
+            getWorld().removeObject(this);
+        }
+   }
+   
+   public void BulletPotition(){
+       setImage("bullet"+numBu+".png");
         switch(position)
         {
            case 0: numBu=0;
@@ -36,43 +69,6 @@ public class Bullet extends Actor
                    setLocation(getX()-12,getY());
                    break;
         }
-            
-          
-        DañosDragones();
-        
-        
-        }   
-        
-        private void DañosDragones(){
-            Actor DragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
-            Actor DragonFront = getOneObjectAtOffset(-4,-7, DragonFront.class);
-            Actor DragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
-            
-        if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
-           getWorld().removeObject(this);
-        }
-        else if(DragonHead != null )
-        {
-            Nivel1 nivel1= (Nivel1)getWorld();
-            
-            nivel1.vidasenemigo.decrement();
-            nivel1.points.increment();
-            getWorld().removeObject(this);
-        }else if(DragonFront != null )
-        {
-            Nivel2 nivel2= (Nivel2)getWorld();
-            
-            nivel2.vidasenemigo.decrement();
-            nivel2.points.increment();
-            getWorld().removeObject(this);
-        }else if(DragonBody != null )
-        {
-            Nivel3 nivel3= (Nivel3)getWorld();
-            
-            nivel3.vidasenemigo.decrement();
-            nivel3.points.increment();
-            getWorld().removeObject(this);
-        }
-   }
+    }
 }
     

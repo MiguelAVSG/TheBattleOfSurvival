@@ -8,14 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Menu extends World
 {
-
-    /**
-     * Constructor for objects of class Menu.
-     * 
-     */
     public Menu()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1024, 600, 1); 
         prepare();
     }
@@ -28,17 +22,13 @@ public class Menu extends World
     {
         Title title = new Title();
         addObject(title,528,85);
-
         Play play = new Play();
         addObject(play,523,255);
-
         Exit exit = new Exit();
         addObject(exit,521,525);
-
         LoadGame cargarPartida = new LoadGame();
         addObject(cargarPartida,523,336);
         Instructions instructions = new Instructions();
         addObject(instructions,524,418);
-        
     }
 }

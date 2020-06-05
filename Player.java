@@ -42,121 +42,35 @@ public class Player extends Actor
     {
         int x= getX();
         int y= 455;
-        int ybend=485;  
         int key;
-        
-        
-        //RIGTH        
+            
         if(Greenfoot.isKeyDown("d"))
         {
-           setImage(imagesR[numR]);
-           band=0;
-           direction=0;
-           indexCount++;
-             if(indexCount>7){
-                numR++;
-                indexCount=0;
-                setLocation(x+15,y);
-             }
-             if(numR>=imagesR.length){
-                 numR=0;
-             }
+           Right();
         }
-        
-        
-        //LEFT
         else if(Greenfoot.isKeyDown("a"))
         {
-            setImage(imagesL[numL]);
-            band=1;
-            direction=1;
-            indexCount++;
-               if(indexCount>7){
-                numL++;
-                indexCount=0;
-                setLocation(x-15,y);
-               }
-               if(numL>=imagesL.length){
-                 numL=0;
-               }
+            Left();
         }
-        
-        //JUMP
         else if(pressJump && Greenfoot.isKeyDown("space"))
         {
-           if(band==0){
-                numS=0;
-                direction=0;
-                setLocation(x,y);
-                setImage(imagesS[numS]);
-                //Greenfoot.delay(50);
-                
-                
-                
-           }
-           
-           else if(band==1)
-           {
-               numS=1;
-               direction=1;
-               setLocation(x,y);
-               setImage(imagesS[numS]);
-               //Greenfoot.delay(50);
-               
-               
-               
-           }      
-           pressJump=false;
-          }
-          else if(!pressJump && !Greenfoot.isKeyDown("space")){
-                 pressJump=true;
-          }
-       
-        //BEND
+           Jump();
+        }
+        else if(!pressJump && !Greenfoot.isKeyDown("space")){
+           pressJump=true;
+        }
         else if(Greenfoot.isKeyDown("s"))
         {
-             if(band==0){
-                numA=0;
-                direction=4;
-                
-                setLocation(x,ybend);
-                setImage(imagesA[numA]);
-                
-                }
-              
-              else if(band==1)
-              {
-                numA=1;
-                direction=5;
-                setLocation(x,ybend);
-                setImage(imagesA[numA]);
-              }
-       }
-       
-      
-       //AIM UP
+             Bend();
+        }
         else if(Greenfoot.isKeyDown("w"))
         {
-            if(band==0){
-               numP=0;
-               direction=2;
-               setLocation(x,y);
-               setImage(imagesP[numP]);
-             }
-             else if(band==1)
-             {
-               numP=1;
-               direction=3;
-               setLocation(x,y);
-               setImage(imagesP[numP]);
-             }
+            AimUp();
        }
-       
-       //FUNCTION SHOT
-       shot(direction);
+       Shot(direction);
     } 
     
-    public void shot(int direction){
+    public void Shot(int direction){
            if (pressShot && Greenfoot.isKeyDown("k"))
            {
                Bullet bullet= new Bullet(direction);
@@ -182,7 +96,89 @@ public class Player extends Actor
             }
     }
     
-   
-     
+    public void Right(){
+           setImage(imagesR[numR]);
+           band=0;
+           direction=0;
+           indexCount++;
+             if(indexCount>7){
+                numR++;
+                indexCount=0;
+                setLocation(getX()+15,getY());
+             }
+             if(numR>=imagesR.length){
+                 numR=0;
+             }
+    }
     
+    public void Left(){
+            setImage(imagesL[numL]);
+            band=1;
+            direction=1;
+            indexCount++;
+               if(indexCount>7){
+                numL++;
+                indexCount=0;
+                setLocation(getX()-15,getY());
+               }
+               if(numL>=imagesL.length){
+                 numL=0;
+               }
+    }
+    
+    public void Jump(){
+        if(band==0){
+                numS=0;
+                direction=0;
+                setLocation(getX(), getY());
+                setImage(imagesS[numS]);
+                
+           }
+           
+           else if(band==1)
+           {
+               numS=1;
+               direction=1;
+               setLocation(getX(),getY());
+               setImage(imagesS[numS]);
+           }      
+           pressJump=false;
+    }
+    
+    public void Bend(){
+        int ybend=485;
+        if(band==0){
+                numA=0;
+                direction=4;
+                
+                setLocation(getX(),ybend);
+                setImage(imagesA[numA]);
+                
+                }
+              
+              else if(band==1)
+              {
+                numA=1;
+                direction=5;
+                setLocation(getX(),ybend);
+                setImage(imagesA[numA]);
+              }
+    }
+    
+    public void AimUp(){
+        if(band==0){
+               numP=0;
+               direction=2;
+               setLocation(getX(),getY());
+               setImage(imagesP[numP]);
+             }
+             else if(band==1)
+             {
+               numP=1;
+               direction=3;
+               setLocation(getX(),getY());
+               setImage(imagesP[numP]);
+            
+              }
+    }
 }

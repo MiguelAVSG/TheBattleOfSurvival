@@ -1,11 +1,5 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class misil here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Misil extends Actor
 {
     private int xVelocity=9;
@@ -16,7 +10,6 @@ public class Misil extends Actor
      */
     public void act() 
     {
-        
         int x= getX();
         int y= getY();
         setLocation(x + xVelocity * xDirection,y);
