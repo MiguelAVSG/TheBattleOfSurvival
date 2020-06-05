@@ -21,15 +21,15 @@ public class DragonFront extends Actor
     
     public void shotLacer()
     {
-             int m=Greenfoot.getRandomNumber(100+1);
-             int n=Greenfoot.getRandomNumber(2);
-       if(m==1)
+             int misilesRandom=Greenfoot.getRandomNumber(100+1);
+             int posicionRandom=Greenfoot.getRandomNumber(2);
+       if(misilesRandom==1)
        {
           Lacer lacer = new Lacer();
           Greenfoot.playSound("lacer.mp3");
           boolean disparollegofinal=false;
           if (disparollegofinal == false)
-          switch(n){
+          switch(posicionRandom){
                      case 0: 
                              disparollegofinal = true;
                              getWorld().addObject(lacer, 780 , 345);

@@ -25,7 +25,7 @@ public class SaveButton extends Actor
         }
        else{
            save.SetAll(lifes,points,level);
-        }
+       }
         return save;
     }
     

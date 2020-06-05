@@ -30,8 +30,8 @@ public class SavedScreen2 extends World
      * That is: create the initial objects and add them to the world.
      */
     private void prepare()
-    {int nivel = 3;
-        SaveButton saveButton = new SaveButton(life.getValue(), points.getValue(), nivel);
+    {int nivel3 = 3;
+        SaveButton saveButton = new SaveButton(life.getValue(), points.getValue(), nivel3);
         addObject(saveButton,225,477);
         NextLevel3 nextLevel3 = new NextLevel3(life.getValue(), points.getValue());
         addObject(nextLevel3,554,488);

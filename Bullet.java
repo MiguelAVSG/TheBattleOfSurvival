@@ -13,6 +13,7 @@ public class Bullet extends Actor
     public void act() 
     {
         
+        
         setImage("bullet"+numBu+".png");
         switch(position)
         {

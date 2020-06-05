@@ -14,7 +14,7 @@ public class LoadGame extends Actor
         if (Greenfoot.mouseClicked(this)){
             int datos[];
             datos = new int[3];
-            System.out.println("Loading Game Files...");
+            
             datos = saveGame.readFile("Saves.txt");
             game(datos);
         }
@@ -22,14 +22,14 @@ public class LoadGame extends Actor
     }
     
     public void game(int[] datos){
-        
-        if(datos[2] == 2){
+        int mision2=2, mision3=3;
+        if(datos[2] == mision2){
             Greenfoot.setWorld(new Nivel2(datos[0],datos[1]));
-            System.out.println("Carga completada");
+            
         }
-        if(datos[2] == 3){
+        if(datos[2] == mision3){
             Greenfoot.setWorld(new Nivel3(datos[0],datos[1]));
-            System.out.println("Carga completada");
+           
         }
     }
 }

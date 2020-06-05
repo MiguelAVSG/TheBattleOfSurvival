@@ -35,8 +35,8 @@ public class DragonHead extends Actor
     }
          
     public void fireShot(){
-           int m=Greenfoot.getRandomNumber(80);
-       if(m==1)
+           int fuegoRandom=Greenfoot.getRandomNumber(80);
+       if(fuegoRandom==1)
        {
           Fire fire = new Fire(2);
           Greenfoot.playSound("Firedragon.mp3");
