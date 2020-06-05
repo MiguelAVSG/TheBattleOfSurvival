@@ -48,24 +48,25 @@ public class Bullet extends Actor
    
    public void BulletPotition(){
        setImage("bullet"+numBu+".png");
+       int derecha=0, izquierda=1, arribaDerecha=2, arribaIzquierda=3,agachadoDerecha=4,agachadoIzquierda=5;
         switch(position)
         {
-           case 0: numBu=0;
+           case 0: numBu=derecha;
                    setLocation(getX()+12,getY());
                    break;
-           case 1: numBu=1;
+           case 1: numBu=izquierda;
                    setLocation(getX()-12,getY());
                    break;
-           case 2: numBu=2;
+           case 2: numBu=arribaDerecha;
                    setLocation(getX()+12,getY()-8);
                    break;
-           case 3: numBu=3;
+           case 3: numBu=arribaIzquierda;
                    setLocation(getX()-12,getY()-8);
                    break;
-           case 4: numBu=0;
+           case 4: numBu=agachadoDerecha;
                    setLocation(getX()+12,getY());
                    break;
-           case 5: numBu=1;
+           case 5: numBu=agachadoIzquierda;
                    setLocation(getX()-12,getY());
                    break;
         }

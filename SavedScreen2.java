@@ -1,14 +1,7 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class SavedScreen2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class SavedScreen2 extends World
 {
-
     PointsAndLife life;
     PointsAndLife points;
     

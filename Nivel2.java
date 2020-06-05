@@ -1,12 +1,5 @@
+import greenfoot.*;  
 
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Nivel2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Nivel2 extends Niveles
 {
     PointsAndLife points;
@@ -14,10 +7,6 @@ public class Nivel2 extends Niveles
     PointsAndLife vidasenemigo;
     DragonFront dragonFront = new DragonFront();
     
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
     public Nivel2(int lifes, int points)
     {    
         prepare();

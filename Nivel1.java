@@ -1,26 +1,12 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*;  
 public class Nivel1 extends Niveles
 {
-    
-    
     
     PointsAndLife points;
     PointsAndLife lifes;
     PointsAndLife vidasenemigo;
     DragonHead dragonHead = new DragonHead();
     
-    
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
     public Nivel1()
     {    
         prepare();
@@ -33,11 +19,6 @@ public class Nivel1 extends Niveles
         PasarNivel();
     }
     
-
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
     private void prepare()
     {
         addObject(dragonHead,490,78);

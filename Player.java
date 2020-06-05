@@ -41,7 +41,7 @@ public class Player extends Actor
     public void act() 
     {
         int x= getX();
-        int y= 455;
+        
         int key;
             
         if(Greenfoot.isKeyDown("d"))
@@ -99,12 +99,13 @@ public class Player extends Actor
     public void Right(){
            setImage(imagesR[numR]);
            band=0;
+           int y= 455;
            direction=0;
            indexCount++;
              if(indexCount>7){
                 numR++;
                 indexCount=0;
-                setLocation(getX()+15,getY());
+                setLocation(getX()+15,y);
              }
              if(numR>=imagesR.length){
                  numR=0;
@@ -114,12 +115,13 @@ public class Player extends Actor
     public void Left(){
             setImage(imagesL[numL]);
             band=1;
+            int y= 455;
             direction=1;
             indexCount++;
                if(indexCount>7){
                 numL++;
                 indexCount=0;
-                setLocation(getX()-15,getY());
+                setLocation(getX()-15,y);
                }
                if(numL>=imagesL.length){
                  numL=0;
@@ -127,10 +129,11 @@ public class Player extends Actor
     }
     
     public void Jump(){
+        int y= 455;
         if(band==0){
                 numS=0;
                 direction=0;
-                setLocation(getX(), getY());
+                setLocation(getX(), y);
                 setImage(imagesS[numS]);
                 
            }
@@ -139,7 +142,7 @@ public class Player extends Actor
            {
                numS=1;
                direction=1;
-               setLocation(getX(),getY());
+               setLocation(getX(),y);
                setImage(imagesS[numS]);
            }      
            pressJump=false;
@@ -166,17 +169,18 @@ public class Player extends Actor
     }
     
     public void AimUp(){
+        int y= 455;
         if(band==0){
                numP=0;
                direction=2;
-               setLocation(getX(),getY());
+               setLocation(getX(),y);
                setImage(imagesP[numP]);
              }
              else if(band==1)
              {
                numP=1;
                direction=3;
-               setLocation(getX(),getY());
+               setLocation(getX(),y);
                setImage(imagesP[numP]);
             
               }
