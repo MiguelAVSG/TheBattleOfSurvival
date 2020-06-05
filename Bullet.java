@@ -12,7 +12,7 @@ public class Bullet extends Actor
     
     public void act() 
     {
-
+        setImage("bullet"+numBu+".png");
         BulletPotition();
         DañosDragones();
         
@@ -48,7 +48,7 @@ public class Bullet extends Actor
    
    public void BulletPotition(){
        setImage("bullet"+numBu+".png");
-       int derecha=0, izquierda=1, arribaDerecha=2, arribaIzquierda=3,agachadoDerecha=4,agachadoIzquierda=5;
+       int derecha=0, izquierda=1, arribaDerecha=2, arribaIzquierda=3,agachadoDerecha=0, agachadoIzquierda=1; 
         switch(position)
         {
            case 0: numBu=derecha;
