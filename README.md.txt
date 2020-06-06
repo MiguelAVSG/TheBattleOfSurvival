@@ -8,4 +8,7 @@ El juego da lugar en un futuro con tecnología muy avanzada en una pequeña ciudad
 El juego tendrá una dificultad un poco complicada por lo cual el juego será para mayores de 8 en adelante principalmente jovenes que busquen un reto complicado que superar.
 
 ## Digrama de clases
-![Diagrama de clases](DiagramaClases.png)
+! [Diagrama de clases](DiagramaClases.png)
+
+## Link de video del juego
+https://www.youtube.com/watch?v=39n3wX2IXQs&feature=youtu.be
