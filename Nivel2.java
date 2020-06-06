@@ -6,7 +6,7 @@ public class Nivel2 extends Niveles
     PointsAndLife lifes;
     PointsAndLife vidasenemigo;
     DragonFront dragonFront = new DragonFront();
-    
+
     public Nivel2(int lifes, int points)
     {    
         prepare();
@@ -18,7 +18,6 @@ public class Nivel2 extends Niveles
         addObject(vidasenemigo, 500, 85);
         PasarNivel();
     }
-    
 
     /**
      * Prepare the world for the start of the program.
@@ -28,17 +27,17 @@ public class Nivel2 extends Niveles
     {
         addObject(dragonFront,910,400);
     }
-    
+
     public void act(){
         PasarNivel();
     }
-     
+
     public void PasarNivel(){
         if(vidasenemigo.getValue() == 100){
-               removeObject(dragonFront);
-                lifes.incrementLife();
-                Greenfoot.setWorld(new SavedScreen2(lifes, points));
-            }
-       
+            removeObject(dragonFront);
+            lifes.incrementLife();
+            Greenfoot.setWorld(new SavedScreen2(lifes, points));
+        }
+
     }
 }

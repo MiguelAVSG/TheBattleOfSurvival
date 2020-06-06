@@ -1,12 +1,12 @@
 import greenfoot.*;  
 public class Nivel1 extends Niveles
 {
-    
+
     PointsAndLife points;
     PointsAndLife lifes;
     PointsAndLife vidasenemigo;
     DragonHead dragonHead = new DragonHead();
-    
+
     public Nivel1()
     {    
         prepare();
@@ -18,24 +18,24 @@ public class Nivel1 extends Niveles
         addObject(vidasenemigo, 500, 85);
         PasarNivel();
     }
-    
+
     private void prepare()
     {
         addObject(dragonHead,490,78);
     }
-    
+
     public void act(){
         PasarNivel();
         mainMusic.playLoop();
     }
-    
+
     public void PasarNivel(){
-        
+
         if(vidasenemigo.getValue()==200){
-                removeObject(dragonHead);
-                lifes.incrementLife();
-                Greenfoot.setWorld(new SaveScreen(lifes, points));
-            } 
+            removeObject(dragonHead);
+            lifes.incrementLife();
+            Greenfoot.setWorld(new SaveScreen(lifes, points));
+        } 
     }
-    
+
 }

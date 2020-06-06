@@ -10,6 +10,7 @@ public class ReturnToMenu extends Actor
     private void click(){
         if (Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new Menu());
+            Greenfoot.stop();
         }
     }
 }

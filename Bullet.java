@@ -1,29 +1,28 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-
 public class Bullet extends Actor
 {
     private int position;
     private int numBu;
-    
+
     public Bullet(int direction){
         position=direction;
     }
-    
+
     public void act() 
     {
         setImage("bullet"+numBu+".png");
         BulletPotition();
         DañosDragones();
-        
-        }   
-        
-        private void DañosDragones(){
-            Actor dragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
-            Actor dragonFront = getOneObjectAtOffset(-4,-7, DragonFront.class);
-            Actor dragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
+
+    }   
+
+    private void DañosDragones(){
+        Actor dragonHead = getOneObjectAtOffset(0,0, DragonHead.class);
+        Actor dragonFront = getOneObjectAtOffset(0,0, DragonFront.class);
+        Actor dragonBody = getOneObjectAtOffset(0,0, DragonBody.class);
         if(getX()>=getWorld().getWidth()-3 || (getX())<=3){
-           getWorld().removeObject(this);
+            getWorld().removeObject(this);
         }
         else if(dragonHead != null )
         {
@@ -44,32 +43,32 @@ public class Bullet extends Actor
             nivel3.points.increment();
             getWorld().removeObject(this);
         }
-   }
-   
-   public void BulletPotition(){
-       setImage("bullet"+numBu+".png");
-       int derecha=0, izquierda=1, arribaDerecha=2, arribaIzquierda=3,agachadoDerecha=0, agachadoIzquierda=1; 
+    }
+
+    public void BulletPotition(){
+        setImage("bullet"+numBu+".png");
+        int right=0, left=1, topRight=2, topLeft=3,bendRight=0, bendLeft=1; 
         switch(position)
         {
-           case 0: numBu=derecha;
-                   setLocation(getX()+12,getY());
-                   break;
-           case 1: numBu=izquierda;
-                   setLocation(getX()-12,getY());
-                   break;
-           case 2: numBu=arribaDerecha;
-                   setLocation(getX()+12,getY()-8);
-                   break;
-           case 3: numBu=arribaIzquierda;
-                   setLocation(getX()-12,getY()-8);
-                   break;
-           case 4: numBu=agachadoDerecha;
-                   setLocation(getX()+12,getY());
-                   break;
-           case 5: numBu=agachadoIzquierda;
-                   setLocation(getX()-12,getY());
-                   break;
+            case 0: numBu=right;
+            setLocation(getX()+12,getY());
+            break;
+            case 1: numBu=left;
+            setLocation(getX()-12,getY());
+            break;
+            case 2: numBu=topRight;
+            setLocation(getX()+12,getY()-8);
+            break;
+            case 3: numBu=topLeft;
+            setLocation(getX()-12,getY()-8);
+            break;
+            case 4: numBu=bendRight;
+            setLocation(getX()+12,getY());
+            break;
+            case 5: numBu=bendLeft;
+            setLocation(getX()-12,getY());
+            break;
         }
     }
 }
-    
+ 
