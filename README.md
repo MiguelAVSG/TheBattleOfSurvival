@@ -10,5 +10,5 @@ El juego tendrá una dificultad un poco complicada por lo cual el juego será pa
 ## Digrama de clases
 ! [Diagrama de clases](DiagramaClases.png)
 
-## Link de video del juego
+## Link del video del juego
 https://www.youtube.com/watch?v=39n3wX2IXQs&feature=youtu.be
